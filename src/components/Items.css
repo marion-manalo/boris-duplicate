@@ -1,0 +1,28 @@
+.items-section {
+    padding: 1.5rem 1rem; /* px-4 py-6 */
+  }
+  
+  .items-container {
+    max-width: 1280px; /* container-xl */
+    margin: 0 auto;
+    padding: 1.5rem 1rem; /* px-4 py-6 */
+  }
+  
+  .items-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem; /* gap-6 */
+  }
+  
+  @media (min-width: 768px) {
+    .items-grid {
+      grid-template-columns: repeat(3, 1fr); /* md:grid-cols-3 */
+    }
+  }
+  
+  .searchbar-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem; /* Adds spacing under the search bar */
+  }
+  

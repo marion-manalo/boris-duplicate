@@ -1,0 +1,18 @@
+.publicdash-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3rem;
+}
+
+.publicdash-title {
+  font-size: 1.5rem; 
+  font-weight: bold;
+  margin-bottom: .1rem;
+}
+
+.publicdash-p{
+  font-size: 1rem; 
+  margin-bottom: 1rem; 
+}
+  

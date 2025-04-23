@@ -1,0 +1,62 @@
+.image-burst-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 18.75rem;
+    height: 16rem;
+    margin: 0 auto;
+  }
+  
+  .image-burst-main {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .image-burst-slide {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem;
+    text-align: center;
+    opacity: 0;
+    animation: slideOut 1s ease-out forwards;
+  }
+  
+  .image-burst-inner {
+    max-width: 10rem;
+    max-height: 10rem;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+  }
+  
+  .image-burst-title {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    color: #1f2937;
+  }
+  
+  .image-burst-description {
+    font-size: 0.75rem;
+    color: #4b5563;
+    margin-top: 0.25rem;
+  }
+  
+  @keyframes slideOut {
+    to {
+      opacity: 1;
+      transform: translate(
+        calc(-50% + var(--slide-offset) * 15rem),
+        8.5rem
+      );
+    }
+  }
+  

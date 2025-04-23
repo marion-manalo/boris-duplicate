@@ -1,0 +1,49 @@
+.card {
+    border: 1px solid #d1d5db;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    background-color: white;
+  }
+
+.card-button{
+  border: 1px solid black;
+  padding: .3rem;
+}
+
+.card-button:hover {
+  background-color: grey;
+}
+
+.button-div{
+  display:flex;
+  flex-direction:row;
+  gap: 2.5rem;
+  text-align: center;
+  justify-content: center;
+  margin: .8rem;
+}
+
+.delete-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #c2c2c2;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.delete-button:hover {
+  background-color: #d32f2f;
+}
