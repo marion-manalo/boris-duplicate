@@ -14,7 +14,7 @@ export default function AboutPage() {
                 </p>
                 <br />
                 <p>
-                    Whether you're ready to invest or just starting to learn, Boris helps you build financial knowledge and confidence, one stock at a time.    
+                    Whether you&apos;re ready to invest or just starting to learn, Boris helps you build financial knowledge and confidence, one stock at a time.    
                 </p> 
             </div>
         </main>
