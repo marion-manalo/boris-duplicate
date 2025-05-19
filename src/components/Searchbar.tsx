@@ -36,11 +36,16 @@ const Searchbar = ({ handleSearch }: SearchbarProps) => {
     const tickerToCheck = ticker.toUpperCase(); 
   
     // try to fetch the ticker data
+    interface TickerEntry {
+      ticker: string;
+      [key: string]: unknown;
+    }
+
     try {
       const tickersRes = await fetch('/api/tickers');
-      const tickersList = await tickersRes.json();
-      const valid = tickersList.some((entry: any) => entry.ticker === tickerToCheck);
-  
+      const tickersList: TickerEntry[] = await tickersRes.json();
+      const valid = tickersList.some((entry: TickerEntry) => entry.ticker === tickerToCheck);
+
       if (!valid) {
         alert(`${tickerToCheck} is not a recognized stock ticker.`);
         return;

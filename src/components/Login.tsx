@@ -37,7 +37,7 @@ export default function LoginForm() {
             } else {
                 router.push('/dashboard');
             }
-        } catch (e: any) {
+        } catch (e: unknown) {
             console.error('Login error:', e);
             setError('Check credentials');
         }

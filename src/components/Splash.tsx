@@ -1,7 +1,6 @@
 import Welcome from "./Welcome";
 import './Splash.css';
 import borisStyle from '@/assets/boris-style.png';
-import boris from '@/assets/boris.png';
 import login from '@/assets/login.png';
 import view from '@/assets/view-report.png';
 import dash from '@/assets/Dashboard.png';

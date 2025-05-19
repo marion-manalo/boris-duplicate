@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import logo from '@/assets/boris.png';
 import { useRouter } from 'next/navigation';
-import { useSession, signIn, signOut } from 'next-auth/react';
+import { useSession, signOut } from 'next-auth/react';
 import Link from 'next/link';
 
 // navbar declare states
@@ -50,18 +50,18 @@ const Navbar = () => {
 
           {/* Logo and Title */}
           <div className='flex items-center'>
-            <a href='/' className='flex items-center'>
+            <Link href='/' className='flex items-center'>
               <Image src={logo} alt='Boris logo' width={40} height={40} className='h-10 w-auto' />
               <span className='ml-2 text-xl font-bold text-gray-700'>Boris</span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Menu */}
           <div className='hidden md:flex flex-1 ml-8'>
             <div className='flex space-x-4'>
-              <a href='/' className='text-gray-700 hover:text-gray-900'>Home</a>
-              <a href='/about' className='text-gray-700 hover:text-gray-900'>About</a>
-              <a href='/contact' className='text-gray-700 hover:text-gray-900'>Contact</a>
+              <Link href='/' className='text-gray-700 hover:text-gray-900'>Home</Link>
+              <Link href='/about' className='text-gray-700 hover:text-gray-900'>About</Link>
+              <Link href='/contact' className='text-gray-700 hover:text-gray-900'>Contact</Link>
               <button onClick={handleDashboardClick}>
                 Dashboard
               </button>
@@ -88,9 +88,9 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className='md:hidden bg-[#E2E6EA] p-4'>
-          <a href='/' className='block text-gray-700 py-2'>Home</a>
-          <a href='/about' className='block text-gray-700 py-2'>About</a>
-          <a href='/contact' className='block text-gray-700 py-2'>Contact</a>
+          <Link href='/' className='block text-gray-700 py-2'>Home</Link>
+          <Link href='/about' className='block text-gray-700 py-2'>About</Link>
+          <Link href='/contact' className='block text-gray-700 py-2'>Contact</Link>
           <button onClick={handleDashboardClick}>Dashboard</button>
           <button
             onClick={handleAuthClick}

@@ -7,7 +7,7 @@ import { useSession } from 'next-auth/react';
 // welcome page
 const Welcome = () => {
   const router = useRouter();
-  const { data: session, status } = useSession();
+  const { status } = useSession();
 
   const isLoggedIn = status === 'authenticated';
 

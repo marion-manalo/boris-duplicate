@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { authConfig } from "./app/auth.config";
 import NextAuth from "next-auth";
-import path from "path";
 
 const { auth } = NextAuth(authConfig);
 
@@ -12,7 +11,7 @@ const middleware = async (request: NextRequest) => {
     console.log(isAuthenticated, pathname);
 
     // add routes here if they are meant to be public (would probably include contact later once implemented)
-    const publicPaths = ["/", "/login", "/signup", "/about", "/public"];
+    const publicPaths = ["/", "/login", "/signup", "/about", "/contact", "/public"];
 
     if (!isAuthenticated && !publicPaths.includes(pathname)) {
         return NextResponse.redirect(new URL("/", request.url));
